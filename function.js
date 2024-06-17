@@ -47,7 +47,7 @@ let square1 = function (x) {
 let square = (x) => {
   return x * x;
 };
-
+// bodlogo 1
 function ihbga(x, y) {
   if (x > y) {
     return x;
@@ -58,3 +58,52 @@ function ihbga(x, y) {
 
 let dun = ihbga(20, 50);
 console.log("ihtoo  ", dun);
+// bodlogo 2
+
+let arrayofnumbers = [43, 56, 23, 89, 88, 90];
+let num = 43;
+let num1 = -1;
+function number1(arrayofnumbers) {
+  for (i = 0; i < arrayofnumbers.length; i++) {
+    if (arrayofnumbers[i] !== 43) {
+      return num;
+    } else {
+      return num1;
+    }
+  }
+}
+number1(arrayofnumbers);
+console.log("too", num);
+// bodlogo 4
+let arrayN = [1, 2, 3, 4, 5];
+function Average(arrayN) {
+  let sum4 = 0;
+  for (let i = 0; i < arrayN.length; i++) {
+    sum4 = sum4 + arrayN.length[i];
+  }
+  return sum4 / arrayN.length;
+}
+let averagesum4 = Average(arrayN);
+console.log("dundaj", averagesum4);
+// bodlogo 5
+let arr = [1, 2, 3, 4, 5];
+function sumArray(arr) {
+  let dum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    dum += arr.length[i];
+  }
+  return dum;
+}
+let totaldum = sumArray(arr);
+console.log("niilber", totaldum);
+// bodlogo 6
+function isPrime(num) {
+  if (num <= 1) return false;
+  for (let i = 2; i < num; i++) {
+    if (num % i === 0) {
+      return false;
+    }
+    return true;
+  }
+}
+console.log(isPrime(7));
