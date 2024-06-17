@@ -107,3 +107,8 @@ function isPrime(num) {
   }
 }
 console.log(isPrime(7));
+// bodlogo 8
+let str = "HELLO";
+console.log(str);
+let = output = str.split("").reverse().join("");
+console.log(output);
