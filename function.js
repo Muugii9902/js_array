@@ -59,11 +59,12 @@ function ihbga(x, y) {
 let dun = ihbga(20, 50);
 console.log("ihtoo  ", dun);
 // bodlogo 2
-let arr1 = [1, 2, 3, 4, 5];
+
+let arr1 = [1, 2, 3, 4, 9];
 
 function findIndex(searchArr, findtoo) {
-  console.log("search arr1:", searchArr);
-  console.log("find number:", findtoo);
+  // console.log("search arr1:", searchArr);
+  // console.log("find number:", findtoo);
   for (let i = 0; i <= searchArr.length - 1; i++) {
     if (searchArr[i] === findtoo) {
       return i;
@@ -71,13 +72,24 @@ function findIndex(searchArr, findtoo) {
   }
   return -1;
 }
-let idx = findIndex(arr1, 6);
-console.log("index:", idx);
+let idx = findIndex(arr1, 9);
+console.log("index too:", idx);
 
-idx = findIndex([123, 45, 67, 78, 98], 100);
-console.log("index:", idx);
+// idx = findIndex([123, 45, 67, 78, 98], 98);
+// console.log("index:", idx);
 
 // bodlogo 3 Өгөгдсөн тэмдэгт мөрөөс -аас өгөгдсөн тэмдэгт байгаа эсэхийг олох функц бич. Тухайн тэмдэгт байвал индексийг буцаана. Байхгүй бол -1 буцаана.
+let arr2 = ["h", "e", "l", "l", "o"];
+function findIndex(searchArr, findletters) {
+  for (let i = 0; i <= searchArr.length - 1; i++) {
+    if (searchArr[i] === findletters) {
+      return i;
+    }
+  }
+  return -1;
+}
+let idx1 = findIndex(arr2, "p");
+console.log("index letter", idx1);
 
 // bodlogo 4
 let arrayN = [1, 2, 3, 4, 5];
@@ -187,10 +199,10 @@ let students = [
   },
 ];
 console.log("ehnii suragchiin buh medeelel", students[0]);
-
+// bodlogo 9
 function er_tooloh(local_students) {
   let sum_er = 0;
-  let sum_em = 0;
+
   for (let i = 0; i < local_students.length; i++) {
     if (local_students[i].gender === "male") {
       sum_er = sum_er + 1;
@@ -200,3 +212,49 @@ function er_tooloh(local_students) {
 }
 
 console.log("niit eregtei suragchdiin too", er_tooloh(students));
+
+function em_tooloh(local_students) {
+  let sum_em = 0;
+  for (let i = 0; i < local_students.length; i++) {
+    if (local_students[i].gender === "female") {
+      sum_em = sum_em + 1;
+    }
+  }
+  return sum_em;
+}
+
+console.log("niit emegtei suragchdiin too", em_tooloh(students));
+
+function dundaj_nas(local_students) {
+  let sum = 0;
+  for (let i = 0; i < local_students.length; i++) {
+    sum = sum + local_students[i].age / 5;
+  }
+  return sum;
+}
+let dundajsum = dundaj_nas(students);
+console.log("angiin huuhduudin dundaj nas", dundajsum);
+// 21 ees deesh nastai suragch
+function age_21(local_students) {
+  let sum = {};
+  for (let i = 0; i < local_students.length; i++) {
+    if (local_students[i].age >= 21) {
+      sum = sum + local_students[i].name;
+    }
+  }
+  return sum;
+}
+let nas21 = age_21(students);
+console.log("21 bolon 21 ees deesh nastai huuhduud", nas21);
+// 60 deesh dun avsan huuhduud
+function points_60(local_students) {
+  let sum = 0;
+  for (let i = 0; i < local_students.length; i++) {
+    if (local_students[i].points >= 60) {
+      sum = sum + 1;
+    }
+  }
+  return sum;
+}
+let point = points_60(students);
+console.log("60 ees deesh onoo avsan huuhduud", point);
