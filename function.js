@@ -258,3 +258,66 @@ function points_60(local_students) {
 }
 let point = points_60(students);
 console.log("60 ees deesh onoo avsan huuhduud", point);
+
+// Ugugdsun array iin hamgiin tom, hamgiin bagiin olj, dundajiin olj, min, max, avg gsn 3 utag butsaadag function bichih. jishee ni: input [1, 2, 3, 4, 5] output { min: 1, max: 5, avg: 3 }
+let array = [1, 2, 3, 4, 5];
+
+function max_min_avg(searchArr) {
+  let max1 = 0,
+    min1 = array[0],
+    avg1 = 0;
+  // let obj = { max: max1, min: min1, avg: avg1 };
+
+  for (let i = 0; i < searchArr.length; i++) {
+    if (searchArr[i] > max1) {
+      max1 = searchArr[i];
+    }
+    if (searchArr[i] <= min1) {
+      min1 = searchArr[i];
+    }
+    avg1 = avg1 + searchArr[i] / searchArr.length;
+  }
+  let obj = { max: max1, min: min1, avg: avg1 };
+  return obj;
+}
+let obj1 = max_min_avg(array);
+console.log(obj1);
+
+console.log(max_min_avg(array));
+
+// let max1 = 0,
+//   min1 = 3,
+//   avg1 = 5;
+// let obj = { max: max1, min: min1, avg: avg1 };
+// obj = { max: 100, min: 33, avg: 1 };
+// console.log("=====", obj);
+
+// bodlogo 2 Ugugdsun zahialguudiin niit borluulaltiin dun oldog function bichih
+
+const orders = [
+  {
+    orderId: 1,
+    items: [
+      { itemName: "Apple", price: 10 },
+      { itemName: "Banana", price: 15 },
+    ],
+  },
+  {
+    orderId: 2,
+    items: [
+      { itemName: "Orange", price: 1.5 },
+      { itemName: "Grapes", price: 3 },
+    ],
+  },
+];
+function order_price(order) {
+  let od1sum = 0;
+  let od2sum = 0;
+  for (let i = 0; i < order.length; i++) {
+    od1sum = od1sum + order[0].items[i].price;
+    od2sum = od2sum + order[1].items[i].price;
+  }
+  return od1sum + od2sum;
+}
+
+console.log("orderiin niit dun", order_price(orders));
