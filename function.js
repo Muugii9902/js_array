@@ -294,30 +294,39 @@ console.log(max_min_avg(array));
 
 // bodlogo 2 Ugugdsun zahialguudiin niit borluulaltiin dun oldog function bichih
 
-const orders = [
-  {
-    orderId: 1,
-    items: [
-      { itemName: "Apple", price: 10 },
-      { itemName: "Banana", price: 15 },
-    ],
-  },
-  {
-    orderId: 2,
-    items: [
-      { itemName: "Orange", price: 1.5 },
-      { itemName: "Grapes", price: 3 },
-    ],
-  },
-];
-function order_price(order) {
-  let od1sum = 0;
-  let od2sum = 0;
-  for (let i = 0; i < order.length; i++) {
-    od1sum = od1sum + order[0].items[i].price;
-    od2sum = od2sum + order[1].items[i].price;
-  }
-  return od1sum + od2sum;
-}
+// const orders = [
+//   {
+//     orderId: 1,
+//     items: [
+//       { itemName: "Apple", price: 10 },
+//       { itemName: "Banana", price: 15 },
+//     ],
+//   },
+//   {
+//     orderId: 2,
+//     items: [
+//       { itemName: "Orange", price: 1.5 },
+//       { itemName: "Grapes", price: 3 },
+//     ],
+//   },
+// ];
+// function order_price(orders) {
+//   let od1sum = 0;
 
-console.log("orderiin niit dun", order_price(orders));
+//   for (let i = 0; i < orders.length; i++) {
+//     for (let index = 0; index < orders[i].items.length; index++) {
+//       sum = sum + orders[i].items[index].price;
+//       console.log(order[i].items[index].price);
+//     }
+//     console.log("sum", sum);
+
+//       od1sum = od1sum + order[0].items[i].price;
+//     od2sum = od2sum + order[1].items[i].price;
+//   }
+//   return sum;
+// }
+
+// console.log("order price iin dun", order_price(orders));
+// bodlogo 3 Ugugdsun array iin anhnii utagtai bolon квадрат, куб iin oldog function bichih. jishee ni: input [1, 2, 3, 4, 5]
+let input = [1, 2, 3, 4, 5];
+// bodlogo 4
