@@ -50,13 +50,13 @@ let text = "the quick brown fox";
 function large_text(abc) {
   let arr3 = text.split(" ");
   for (let i = 0; i < arr3.length; i++) {
-    arr3[i].charAt(0).toUpperCase() + [i].slice(1);
+    arr3[i] = arr3[i].charAt(0).toUpperCase() + arr3[i].slice(1);
   }
-  return arr3;
+  return arr3.join(" ");
 }
 
-console.log(large_text(text));
-// console.log(arr3);
+console.log(text, "=>", large_text(text));
+
 // function large_text(arr3){
 //   for (let i=0;i<arr3.length;i++)
 
