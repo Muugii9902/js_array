@@ -95,14 +95,77 @@ console.log(textArr);
 console.log(ra);
 
 // bodlogo 6 Ugugdsun text dotor tuhain oruulsan keyword(prompt ashiglah) ni bn uu gedgiin shalgah function bich. text = 'animal world' input: animal output: true, input: cat ouput: false
-// let text1 = "aminal world";
+// let text1 = "animal world";
 // function search_text(str) {
 //   let array4 = text1.split(" ");
+//   let niilber3 = prompt("text oruulah");
+//   let text2 = niilber3.split(" ");
 
-//   for (let i = 0; i < array4.length; i++) {
-//     if (array4[i] === text1) {
-//     }
-//     return true;
+//   for (let i = 0; i < text2.length; i++) {
+//     console.log(
+//       "haisan ug " + text2[i] + " baigaa eseh " + array4.includes(text2[i])
+//     );
 //   }
-//   else{return false;}
+//   return;
 // }
+// let = search_text(text1);
+// console.log(search_text(niilber3));
+
+// bodolgo 7
+
+const data = [
+  {
+    productName: "Bakery",
+    unitPrice: 5000,
+    amount: 100,
+    totalPrice: 500000,
+    casherId: 1,
+    date: "2022-11-01",
+  },
+  {
+    productName: "Chocolate",
+    unitPrice: 3000,
+    amount: 18,
+    totalPrice: 54.0,
+    casherId: 1,
+    date: "2022-11-01",
+  },
+  {
+    productName: "Cake",
+    unitPrice: 8000,
+    amount: 10,
+    totalPrice: 80.0,
+    casherId: 1,
+    date: "2022-11-01",
+  },
+  {
+    productName: "Candy",
+    unitPrice: 2000,
+    amount: 16,
+    totalPrice: 32.0,
+    casherId: 1,
+    date: "2022-11-01",
+  },
+  {
+    productName: "Icecream",
+    unitPrice: 6000,
+    amount: 12,
+    totalPrice: 72.0,
+    casherId: 1,
+    date: "2022-11-01",
+  },
+];
+function calculateTotalPrice(data) {
+  let sum = 0;
+  let too10 = 0;
+
+  for (let i = 0; i < data.length; i++) {
+    sum = sum + data[i].totalPrice;
+    too10 = too10 + data[i].amount;
+  }
+  let obj2 = { une: sum, too: too10 };
+  return obj2;
+}
+
+let total = calculateTotalPrice(data);
+console.log("niit borluulaltiin dun", total);
